@@ -15,6 +15,8 @@ services:
             - 'adguardhome_work:/opt/adguardhome/work:rw'
             - 'adguardhome_conf:/opt/adguardhome/conf:rw'
         command: --host 0.0.0.0 --port 80 --no-check-update --config /opt/adguardhome/conf/AdGuardHome.yaml
+        
+        ports: "53:1337"
 
     # https://github.com/balenablocks/hostname
     hostname:
